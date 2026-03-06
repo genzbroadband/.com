@@ -150,13 +150,23 @@
     </section>
 
     <section id="connection">
-        <div class="container">
-            <div class="section-title"><h2>New Connection Request</h2></div>
-            <div class="form">
-                <input type="text" placeholder="Your Full Name">
-                <input type="text" placeholder="Phone Number">
-                <input type="text" placeholder="Full Address">
-                <button>Submit Request</button>
+    <div class="container">
+        <div class="section-title"><h2>New Connection Request</h2></div>
+        <div class="form">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        
+        <input type="text" name="Full Name" placeholder="Your Full Name" required>
+        
+        <input type="text" name="Phone Number" placeholder="Phone Number" required>
+        
+        <input type="text" name="Address" placeholder="Full Address" required>
+        
+        <button type="submit">Submit Request</button>
+        
+    </form>
+</div>
+    </div>
+</section>
             </div>
         </div>
     </section>
@@ -190,6 +200,26 @@
     <a class="float-btn speedtest" href="https://fast.com" target="_blank">⚡ Speed Test</a>
     <a class="float-btn call" href="tel:01918478035">📞 Call</a>
     <a class="float-btn whatsapp" href="https://wa.me/8801918478035">💬 WhatsApp</a>
+<script>
+    function sendToWhatsApp() {
+        const name = document.getElementById('custName').value;
+        const phone = document.getElementById('custPhone').value;
+        const address = document.getElementById('custAddress').value;
 
+        if (name === "" || phone === "" || address === "") {
+            alert("সবগুলো ঘর পূরণ করুন (Please fill all fields)");
+            return;
+        }
+
+        const myNumber = "8801918478035"; // আপনার নম্বর
+        const message = "New Connection Request:%0A" + 
+                        "Name: " + name + "%0A" + 
+                        "Phone: " + phone + "%0A" + 
+                        "Address: " + address;
+
+        const url = "https://wa.me/" + myNumber + "?text=" + message;
+        window.open(url, '_blank').focus();
+    }
+</script>
 </body>
 </html>
