@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAJ BROADBAND NETWORK</title>
+    <title>RAJ NETWORK - Broadband Service</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
@@ -19,32 +19,32 @@
         
         .logo-box { display: flex; align-items: center; text-decoration: none; gap: 10px; }
         .logo-box img { height: 65px; width: auto; object-fit: contain; }
-        .brand-name { font-size: 24px; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
+        .brand-name { font-size: 26px; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
 
         nav a { margin-left: 25px; text-decoration: none; font-weight: 600; color: #475569; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
 
-        /* Hero Section */
+        /* Hero Section - High-Tech Background */
         .hero {
             padding: 160px 20px;
             text-align: center;
             color: #fff;
-            background: linear-gradient(rgba(10, 77, 162, .85), rgba(0, 210, 255, .7)),
-                        url("https://images.unsplash.com/photo-1535223289827-42f1e9919769") center/cover;
-            animation: zoom 20s infinite alternate;
+            background: linear-gradient(rgba(10, 77, 162, 0.8), rgba(15, 23, 42, 0.9)),
+                        url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070") center/cover;
+            background-attachment: fixed;
+            position: relative;
         }
 
-        @keyframes zoom { 0% { background-size: 100% } 100% { background-size: 115% } }
-
-        .hero h1 { font-size: 52px; font-weight: 800; margin-bottom: 20px; text-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        .hero p { font-size: 20px; margin-bottom: 35px; }
-        .btn { background: #fff; color: var(--primary); padding: 14px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
-        .btn:hover { background: var(--primary); color: #fff; transform: translateY(-3px); }
+        .hero h1 { font-size: 52px; font-weight: 800; margin-bottom: 20px; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        .hero p { font-size: 20px; margin-bottom: 35px; opacity: 0.9; }
+        .btn { background: var(--accent); color: #0f172a; padding: 14px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; box-shadow: 0 0 20px rgba(0, 210, 255, 0.4); }
+        .btn:hover { background: #fff; color: var(--primary); transform: translateY(-3px); }
 
         /* Sections */
         section { padding: 80px 0; }
         .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 36px; color: #1e293b; }
+        .section-title h2 { font-size: 36px; color: #1e293b; position: relative; display: inline-block; }
+        .section-title h2::after { content: ''; width: 60px; height: 4px; background: var(--accent); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
 
         /* Packages */
         .packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
@@ -56,19 +56,6 @@
         ul li { margin-bottom: 10px; font-size: 15px; }
         ul li::before { content: "✔ "; color: #22c55e; font-weight: bold; }
         .order { display: block; background: var(--primary); color: #fff; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 700; transition: 0.3s; }
-        .order:hover { background: #083d81; }
-
-        /* Coverage */
-        .coverage { background: #eef6ff; text-align: center; }
-        .coverage h3 { color: var(--primary); margin-top: 15px; font-size: 22px; word-spacing: 5px; }
-
-        /* Form */
-        .form { max-width: 500px; margin: auto; background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .form input { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; outline: none; }
-        .form button { width: 100%; padding: 14px; border: none; background: var(--primary); color: #fff; font-weight: 700; border-radius: 8px; cursor: pointer; transition: 0.3s; }
-
-        /* Map */
-        .map-container { border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 5px solid #fff; }
 
         /* Footer */
         footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 50px 0; }
@@ -78,7 +65,6 @@
         .whatsapp { bottom: 20px; background: #25D366; }
         .call { bottom: 80px; background: #0a4da2; }
         .speedtest { bottom: 140px; background: #ff6b00; }
-        .float-btn:hover { transform: scale(1.05); }
 
         @media(max-width:768px){
             nav { display: none; }
@@ -93,8 +79,8 @@
     <header>
         <div class="container">
             <a href="#" class="logo-box">
-                <img src="Gemini_Generated_Image_khhiu1khhiu1khhi.png" alt="RAJ BROADBAND Logo">
-                <span class="brand-name">RAJ BROADBAND</span>
+                <img src="Gemini_Generated_Image_khhiu1khhiu1khhi.png" alt="RAJ NETWORK Logo">
+                <span class="brand-name">RAJ NETWORK</span>
             </a>
             <nav>
                 <a href="#plans">Packages</a>
@@ -107,9 +93,9 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Welcome to <br>RAJ BROADBAND NETWORK</h1>
-            <p>High-Speed Broadband Service in Rangchapra & Gauyariya Area</p>
-            <a href="#plans" class="btn">Explore Plans</a>
+            <h1>Experience High Speed with <br>RAJ NETWORK</h1>
+            <p>Reliable Fiber Connectivity for Rangchapra & Gauyariya Belt</p>
+            <a href="#plans" class="btn">View Our Plans</a>
         </div>
     </section>
 
@@ -152,12 +138,12 @@
     <section id="connection">
         <div class="container">
             <div class="section-title"><h2>New Connection Request</h2></div>
-            <div class="form">
+            <div class="form" style="max-width: 500px; margin: auto; background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
                 <form action="https://formspree.io/f/mvzwovye" method="POST">
-                    <input type="text" name="Name" placeholder="Your Full Name" required>
-                    <input type="text" name="Phone" placeholder="Phone Number" required>
-                    <input type="text" name="Address" placeholder="Full Address" required>
-                    <button type="submit">Submit Request</button>
+                    <input type="text" name="Name" placeholder="Your Full Name" required style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; outline: none;">
+                    <input type="text" name="Phone" placeholder="Phone Number" required style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; outline: none;">
+                    <input type="text" name="Address" placeholder="Full Address" required style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; outline: none;">
+                    <button type="submit" style="width: 100%; padding: 14px; border: none; background: var(--primary); color: #fff; font-weight: 700; border-radius: 8px; cursor: pointer; transition: 0.3s;">Submit Request</button>
                 </form>
             </div>
         </div>
@@ -171,22 +157,10 @@
         </div>
     </section>
 
-    <section id="location">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Service Location</h2>
-                <p>📍 Bhaluka, Mymensingh (Rangchapra & Gauyariya Belt)</p>
-            </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14532.7483838703!2d90.37!3d24.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1713500000000!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
     <footer id="contact">
         <p>📍 Office: Rangchapra, Bhaluka, Mymensingh</p>
         <p>📞 Helpline: 01918-478035</p>
-        <p style="margin-top: 15px; font-size: 14px;">© 2026 <strong>RAJ BROADBAND NETWORK</strong>. All Rights Reserved.</p>
+        <p style="margin-top: 15px; font-size: 14px;">© 2026 <strong>RAJ NETWORK</strong>. All Rights Reserved.</p>
     </footer>
 
     <a class="float-btn speedtest" href="https://fast.com" target="_blank">⚡ Speed Test</a>
